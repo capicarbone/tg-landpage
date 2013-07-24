@@ -1,0 +1,6 @@
+.test {
+  height: 5em;
+}
+.test * {
+  background-color: #f12;
+}
