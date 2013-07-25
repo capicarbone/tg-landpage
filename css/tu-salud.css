@@ -1,6 +1,30 @@
-.test {
-  height: 5em;
+* {
+  margin: 0px;
+  padding: 0px;
 }
-.test * {
-  background-color: #f12;
+header.row {
+  margin-top: 1%;
+}
+header.row p {
+  margin-top: 2%;
+}
+section#presentacion {
+  background-color: #ededed;
+  background: #ededed;
+  background: -moz-linear-gradient(top, #ededed 0%, #f6f6f6 46%, #fff 100%);
+  background: -webkit-linear-gradient(top, #ededed 0%, #f6f6f6 46%, #fff 100%);
+  background: -o-linear-gradient(top, #ededed 0%, #f6f6f6 46%, #fff 100%);
+  background: -ms-linear-gradient(top, #ededed 0%, #f6f6f6 46%, #fff 100%);
+  background: linear-gradient(to bottom, #ededed 0%, #f6f6f6 46%, #fff 100%);
+  padding-top: 2%;
+  margin-top: 0px;
+}
+section#presentacion p {
+  text-align: center;
+}
+section#presentacion img {
+  margin: 3% auto;
+}
+section#presentacion .regla-tres {
+  margin-top: 8%;
 }
