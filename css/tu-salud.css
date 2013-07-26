@@ -2,6 +2,9 @@
   margin: 0px;
   padding: 0px;
 }
+body#tg-lp {
+  background-color: #f6f6f6;
+}
 header.row {
   margin-top: 1%;
 }
@@ -10,12 +13,13 @@ header.row p {
 }
 section#presentacion {
   background-color: #ededed;
-  background: #ededed;
-  background: -moz-linear-gradient(top, #ededed 0%, #f6f6f6 46%, #fff 100%);
-  background: -webkit-linear-gradient(top, #ededed 0%, #f6f6f6 46%, #fff 100%);
-  background: -o-linear-gradient(top, #ededed 0%, #f6f6f6 46%, #fff 100%);
-  background: -ms-linear-gradient(top, #ededed 0%, #f6f6f6 46%, #fff 100%);
-  background: linear-gradient(to bottom, #ededed 0%, #f6f6f6 46%, #fff 100%);
+  background: #f5f2f5;
+  background: -moz-linear-gradient(top, #f5f2f5 0%, #fff 22%, #f6f6f6 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f5f2f5), color-stop(22%, #fff), color-stop(100%, #f6f6f6));
+  background: -webkit-linear-gradient(top, #f5f2f5 0%, #fff 22%, #f6f6f6 100%);
+  background: -o-linear-gradient(top, #f5f2f5 0%, #fff 22%, #f6f6f6 100%);
+  background: -ms-linear-gradient(top, #f5f2f5 0%, #fff 22%, #f6f6f6 100%);
+  background: linear-gradient(to bottom, #f5f2f5 0%, #fff 22%, #f6f6f6 100%);
   padding-top: 2%;
   margin-top: 0px;
 }
@@ -27,4 +31,29 @@ section#presentacion img {
 }
 section#presentacion .regla-tres {
   margin-top: 8%;
+  font-size: 1.2em;
+  color: #424242;
+}
+section .tarjeta {
+  background-color: #fff;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 98%;
+  margin-top: 2%;
+  padding-bottom: 3%;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.13);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.13);
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.13);
+}
+section .tarjeta .titulo {
+  border-bottom: solid 1px #b8b4b8;
+  width: 98%;
+  margin-bottom: 2%;
+}
+section .tarjeta .titulo h2 {
+  margin-bottom: 0%;
+  color: #424242;
 }
