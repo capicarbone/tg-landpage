@@ -57,3 +57,8 @@ section .tarjeta .titulo h2 {
   margin-bottom: 0%;
   color: #424242;
 }
+section .tarjeta .titulo .franja {
+  padding-bottom: 0.1%;
+  padding-right: 100%;
+  background-color: #ffa500;
+}
