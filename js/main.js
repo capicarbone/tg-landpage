@@ -14,10 +14,17 @@ function cambiar_seccion() {
 
 		if ( posicion_actual >= ant && posicion_actual < contenidos[i]['pos'] && activo != i){
 
-			contenidos[i]['elem'].animate({ backgroundColor: "green"}, 500);
+			franja_actual = contenidos[i]['elem'].find('.icono');
+			
+			franja_actual.animate({ backgroundColor: "green"}, 500);
 
-			if (activo != -1 )
-				contenidos[activo]['elem'].animate({ backgroundColor: "#ffa500"}, 500);
+			if (activo != -1 ){
+				
+				franja_anterior = contenidos[activo]['elem'].find('.icono');
+
+				franja_anterior.animate({ backgroundColor: "#ffa500"}, 500);
+			}
+				
 
 			activo = i;
 
@@ -38,7 +45,9 @@ $(document).ready(function(){
 
 	contenidos = new Array();
 
-	$(".franja").each(function(i, e){
+	
+
+	$(".tarjeta").each(function(i, e){
 
 		contenidos[i] = {};
 		contenidos[i]['elem'] = $(e);

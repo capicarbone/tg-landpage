@@ -1,9 +1,13 @@
+@import url("http://weloveiconfonts.com/api/?family=entypo");
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
 * {
   margin: 0px;
   padding: 0px;
 }
 body#tg-lp {
-  background-color: #f6f6f6;
+  background-color: #ededed;
 }
 header.row {
   margin-top: 1%;
@@ -13,18 +17,19 @@ header.row p {
 }
 section#presentacion {
   background-color: #ededed;
-  background: #f5f2f5;
-  background: -moz-linear-gradient(top, #f5f2f5 0%, #fff 22%, #f6f6f6 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f5f2f5), color-stop(22%, #fff), color-stop(100%, #f6f6f6));
-  background: -webkit-linear-gradient(top, #f5f2f5 0%, #fff 22%, #f6f6f6 100%);
-  background: -o-linear-gradient(top, #f5f2f5 0%, #fff 22%, #f6f6f6 100%);
-  background: -ms-linear-gradient(top, #f5f2f5 0%, #fff 22%, #f6f6f6 100%);
-  background: linear-gradient(to bottom, #f5f2f5 0%, #fff 22%, #f6f6f6 100%);
+  background: #c7c7c7;
+  background: -moz-linear-gradient(top, #c7c7c7 0%, #fff 21%, #fff 78%, #ededed 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #c7c7c7), color-stop(21%, #fff), color-stop(78%, #fff), color-stop(100%, #ededed));
+  background: -webkit-linear-gradient(top, #c7c7c7 0%, #fff 21%, #fff 78%, #ededed 100%);
+  background: -o-linear-gradient(top, #c7c7c7 0%, #fff 21%, #fff 78%, #ededed 100%);
+  background: -ms-linear-gradient(top, #c7c7c7 0%, #fff 21%, #fff 78%, #ededed 100%);
+  background: linear-gradient(to bottom, #c7c7c7 0%, #fff 21%, #fff 78%, #ededed 100%);
   padding-top: 2%;
   margin-top: 0px;
 }
 section#presentacion p {
   text-align: center;
+  font-size: 1.1em;
 }
 section#presentacion img {
   margin: 3% auto;
@@ -48,23 +53,70 @@ section .tarjeta {
   -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.13);
   box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.13);
 }
+section .tarjeta .franja,
+section .tarjeta p {
+  font-family: robotolight;
+  font-size: 1.1em;
+}
 section .tarjeta .titulo {
   border-bottom: solid 1px #b8b4b8;
   width: 98%;
   margin-bottom: 2%;
+/*.franja
+				padding-bottom 0.1%
+				padding-right 100%				
+				background-color orange
+				
+				border-bottom-right-radius: 10px
+				border-bottom-left-radius: 10px*/
 }
 section .tarjeta .titulo h2 {
   margin-bottom: 0%;
   color: #424242;
+  font-family: robotocondensed;
+  text-align: center;
 }
-section .tarjeta .titulo .franja {
-  padding-bottom: 0.1%;
-  padding-right: 100%;
+section .tarjeta .titulo .icono {
+  border: 0;
+  padding: 10% 18%;
+  padding-top: 0%;
+  width: 20%;
+  color: #fff;
   background-color: #ffa500;
-  -webkit-border-bottom-right-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-radius-bottomright: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  font-size: 2rem;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.4);
+  box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.4);
+}
+footer {
+  background: #ededed;
+  background: -moz-linear-gradient(top, #ededed 0%, #ededed 14%, #f6f6f6 40%, #fff 88%, #fff 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #ededed), color-stop(14%, #ededed), color-stop(40%, #f6f6f6), color-stop(88%, #fff), color-stop(100%, #fff));
+  background: -webkit-linear-gradient(top, #ededed 0%, #ededed 14%, #f6f6f6 40%, #fff 88%, #fff 100%);
+  background: -o-linear-gradient(top, #ededed 0%, #ededed 14%, #f6f6f6 40%, #fff 88%, #fff 100%);
+  background: -ms-linear-gradient(top, #ededed 0%, #ededed 14%, #f6f6f6 40%, #fff 88%, #fff 100%);
+  background: linear-gradient(to bottom, #ededed 0%, #ededed 14%, #f6f6f6 40%, #fff 88%, #fff 100%);
+  padding: 5%;
+}
+footer h3 {
+  font-family: robotocondensed;
+  font-size: 1rem;
+}
+@font-face {
+  font-family: robotocondensed;
+  src: url("fonts/roboto-condensed-webfont.eot");
+  src: url("fonts/roboto-condensed-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/roboto-condensed-webfont.woff") format('woff'), url("fonts/roboto-condensed-webfont.ttf") format('truetype'), url("fonts/roboto-condensed-webfont.svg#robotocondensed") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: robotolight;
+  src: url("fonts/roboto-light-webfont.eot");
+  src: url("fonts/roboto-light-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/roboto-light-webfont.woff") format('woff'), url("fonts/roboto-light-webfont.ttf") format('truetype'), url("fonts/roboto-light-webfont.svg#robotolight") format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
