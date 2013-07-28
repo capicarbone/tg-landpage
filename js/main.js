@@ -2,6 +2,11 @@
 var contenidos;
 var activo = -1;
 
+function patalla_ancho(){
+
+	return window.innerWidth;
+}
+
 function cambiar_seccion() {
 		
 	posicion_actual = $(window).scrollTop();
@@ -10,19 +15,32 @@ function cambiar_seccion() {
 
 	var ant = 300;
 
+	var max_franja = 500;
+
+	if (patalla_ancho() < '768')
+		max_franja = 100;
+
 	for ( i = 0; i < n; i++){
 
 		if ( posicion_actual >= ant && posicion_actual < contenidos[i]['pos'] && activo != i){
 
-			franja_actual = contenidos[i]['elem'].find('.icono');
+			icono_actual = contenidos[i]['elem'].find('.icono');
 			
-			franja_actual.animate({ backgroundColor: "green"}, 500);
+			icono_actual.animate({ backgroundColor: "green"}, 500);
+
+			franja_actual = contenidos[i]['elem'].find('.franja');
+
+			franja_actual.animate({width: '+=' + max_franja + '%'}, 500);
 
 			if (activo != -1 ){
 				
-				franja_anterior = contenidos[activo]['elem'].find('.icono');
+				icono_anterior = contenidos[activo]['elem'].find('.icono');
 
-				franja_anterior.animate({ backgroundColor: "#ffa500"}, 500);
+				icono_anterior.animate({ backgroundColor: "#ffa500"}, 500);
+
+				franja_anterior = contenidos[activo]['elem'].find('.franja');
+
+				franja_anterior.animate({width: '-=' + max_franja + '%'}, 500);
 			}
 				
 
