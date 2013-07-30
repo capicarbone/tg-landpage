@@ -19,11 +19,17 @@ degradado_footer()
 	background: -ms-linear-gradient(top, fondo 0%, fondo 14%, rgba(246,246,246,1) 40%, rgba(255,255,255,1) 88%, rgba(255,255,255,1) 100%);
 	background: linear-gradient(to bottom, fondo 0%, fondo 14%, rgba(246,246,246,1) 40%, rgba(255,255,255,1) 88%, rgba(255,255,255,1) 100%);
 
-bordes_redondeados_inferiores()
-	-webkit-border-bottom-right-radius: 2px
-	-webkit-border-bottom-left-radius: 2px
-	-moz-border-radius-bottomright: 2px
-	-moz-border-radius-bottomleft: 2px
+bordes_redondeados_superiores(radio)
+	-webkit-border-top-right-radius: radio
+	-webkit-border-top-left-radius: radio
+	-moz-border-radius-topright: radio
+	-moz-border-radius-topleft: radio
+
+bordes_redondeados_inferiores(radio)
+	-webkit-border-bottom-right-radius: radio
+	-webkit-border-bottom-left-radius: radio
+	-moz-border-radius-bottomright: radio
+	-moz-border-radius-bottomleft: radio
 
 
 *
@@ -43,12 +49,12 @@ section#presentacion
 	background-color #ededed
 
 	background: rgba(199,199,199,1);
-	background: -moz-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 78%, rgba(237,237,237,1) 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(199,199,199,1)), color-stop(21%, rgba(255,255,255,1)), color-stop(78%, rgba(255,255,255,1)), color-stop(100%, rgba(237,237,237,1)));
-	background: -webkit-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 78%, rgba(237,237,237,1) 100%);
-	background: -o-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 78%, rgba(237,237,237,1) 100%);
-	background: -ms-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 78%, rgba(237,237,237,1) 100%);
-	background: linear-gradient(to bottom, rgba(199,199,199,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 78%, rgba(237,237,237,1) 100%);
+	background: -moz-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 78%, rgba(237,237,237,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(21%, rgba(255,255,255,1)), color-stop(78%, rgba(255,255,255,1)), color-stop(100%, rgba(237,237,237,1)));
+	background: -webkit-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 78%, rgba(237,237,237,1) 100%);
+	background: -o-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 78%, rgba(237,237,237,1) 100%);
+	background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 78%, rgba(237,237,237,1) 100%);
+	background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 78%, rgba(237,237,237,1) 100%);
 
 	padding-top 2%
 	margin-top 0px
@@ -102,26 +108,33 @@ section
 				font-family robotocondensed				
 
 			.icono
-				border 0
-				padding 10% 18%
-				padding-top 0%
-				width 20%
+
 				color white
 				background-color orange
-				font-size 2rem
-				bordes_redondeados_inferiores()
-				sombra_caja( 1px 1px 2px 0px rgba(0,0,0,0.4))
+				border 0
 
-				@media screen and (max-width: 768px){
-					display none
-				}
+				@media screen and (min-width: 768px)					
+					padding 10% 18%
+					padding-top 0%
+					width 20%										
+					font-size 2rem
+					bordes_redondeados_inferiores(2px)
+					sombra_caja( 1px 1px 2px 0px rgba(0,0,0,0.4))
+
+				@media screen and (max-width: 768px)														
+					font-size 1.9rem
+					padding 0.3rem 0.8rem
+					position relative
+					top 1px
+					bordes_redondeados_superiores(2px)
+					sombra_caja( 0px -1px 5px -1px rgba(0,0,0,0.7))
+				
 
 			.icono-small
 				
-				@media screen and (min-width: 768px){
+				@media screen and (min-width: 768px)
 					display none
-				}				
-
+								
 				color white
 				background-color orange
 				border 0
@@ -129,21 +142,37 @@ section
 				padding 0.3rem 0.8rem
 				position relative
 				top 1px
-				//bordes_redondeados_inferiores()
-				//sombra_caja( 1px 1px 2px 0px rgba(0,0,0,0.2))
+				bordes_redondeados_superiores(2px)
+				sombra_caja( 0px -1px 5px -1px rgba(0,0,0,0.7))
+
+	&#que-es img
+		width 8em
 
 
 
 
 footer
-	degradado_footer()
-	
-	padding 5%
+	.footer
+		degradado_footer()
+		
+		padding 5%
+		padding-bottom 1%
 
-	h3
-		font-family robotocondensed
-		font-size 1rem
+		h3
+			font-family robotocondensed
+			font-size 1rem
+			text-align center
+			color negro
+
+	#final
+		background-color white
 		text-align center
+		padding 3%
+		padding-bottom 4%
+		font-family robotolight
+		color #797979
+
+
 
 
 @font-face 

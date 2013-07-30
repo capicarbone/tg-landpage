@@ -29,21 +29,20 @@ function cambiar_seccion() {
 			icono_actual.animate({ backgroundColor: "green"}, 500);
 
 			franja_actual = contenidos[i]['elem'].find('.franja');
-
+			franja_actual.css('padding-bottom', '0.3em');
+			franja_actual.css('width', 0);
 			franja_actual.animate({width: '+=' + max_franja + '%'}, 500);
 
 			if (activo != -1 ){
 				
 				icono_anterior = contenidos[activo]['elem'].find('.icono');
-
 				icono_anterior.animate({ backgroundColor: "#ffa500"}, 500);
 
 				franja_anterior = contenidos[activo]['elem'].find('.franja');
-
-				franja_anterior.animate({width: '-=' + max_franja + '%'}, 500);
+				franja_anterior.animate({paddingBottom: '0em'},300);
+				
 			}
 				
-
 			activo = i;
 
 			break;
