@@ -133,6 +133,12 @@ section .tarjeta .titulo .icono-small {
 section#que-es img {
   width: 8em;
 }
+section#la-solucion img {
+  width: 55%;
+}
+section#la-solucion .row {
+  margin-bottom: 1%;
+}
 footer .footer {
   background: #ededed;
   background: -moz-linear-gradient(top, #ededed 0%, #ededed 14%, #f6f6f6 40%, #fff 88%, #fff 100%);
