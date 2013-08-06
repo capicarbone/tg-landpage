@@ -131,7 +131,7 @@ section .tarjeta .titulo .icono-small {
   }
 }
 section#que-es img {
-  width: 8em;
+  width: 100%;
 }
 section#la-solucion img {
   width: 64%;
