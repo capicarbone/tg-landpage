@@ -131,7 +131,10 @@ section .tarjeta .titulo .icono-small {
   }
 }
 section#que-es img {
-  width: 100%;
+  width: 65%;
+}
+section#quien-soy img {
+  width: 90%;
 }
 section#la-solucion img {
   width: 64%;
@@ -145,6 +148,40 @@ section#la-solucion .doctor img {
 }
 section#la-solucion .row {
   margin-bottom: 4%;
+}
+section#apoyame label {
+  padding-bottom: 1%;
+}
+section#apoyame input[type="text"] {
+  margin-bottom: 4%;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+section#apoyame input[type="text"]:focus {
+  box-shadow: 0 0 5px #02a002;
+  -webkit-box-shadow: 0 0 5px #02a002;
+  -moz-box-shadow: 0 0 5px #02a002;
+}
+section#apoyame .mi-boton {
+  background-color: #008000;
+  border-color: #006100;
+}
+section#apoyame .mi-boton:hover {
+  background-color: #006100;
+}
+section#apoyame .mi-boton:focus {
+  box-shadow: 0 0 5px #02a002;
+  -webkit-box-shadow: 0 0 5px #02a002;
+  -moz-box-shadow: 0 0 5px #02a002;
+}
+section i {
+  font-style: normal;
+  margin-right: 0.3em;
+  font-size: 1.2em;
 }
 footer .footer {
   background: #ededed;

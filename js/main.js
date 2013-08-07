@@ -48,9 +48,6 @@ function cambiar_seccion() {
 			break;
 
 
-		}else{
-
-			console.log( i + ": "+  posicion_actual + ", " + ant + ", " + contenidos[i]['pos']);
 		}
 
 		ant = contenidos[i]['pos'];
